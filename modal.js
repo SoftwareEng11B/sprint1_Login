@@ -25,11 +25,14 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+var location.href;
+
+
+
+window.onclick = fucntion(event) {
+	if(event.target = modal) {
+		modal.style.display = "none";
+	}
+}
 };
-function artistCreate() {
-	location.href= "http://www.google.com";
-}
-function customerCreate() {
-	location.href= "http://www.google.com";
-}
 

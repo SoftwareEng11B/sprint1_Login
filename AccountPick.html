@@ -10,14 +10,56 @@
 	
 	<body>
 		<!-- create and log in buttons-->
-		<div class="btn-group">
-		  <button onclick="document.getElementById('id01').style.display='block'">Create</button>
+		<div class="btn-group main-btn">
+		  <button onclick="document.getElementById('id01').style.display='block'">Create Customer</button>
 		  <button onclick="document.getElementById('id02').style.display='block'">Sign in</button>
+		  <button onclick="document.getElementById('id03').style.display='block'">Create Artist</button>
 		</div>
 
-		<!-- The CREATE Modal -->
+		<!-- The CREATE Customer Modal -->
 		<div id="id01" class="modal">
 		  <span onclick="document.getElementById('id01').style.display='none'" 
+		class="close" title="Close Modal">&times;</span>
+
+		  <!-- Modal Content -->
+		  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h1>Personal Information</h1>
+    </div>
+    <form class="form-style" role="form" ng-submit = "create(customerForm.$valid)">
+            <h2>Let's make art</h2>
+            <ul>
+                <li>
+                    <input type="text" name="name" id="name" class="field-style field-split align-left" placeholder="Name" 
+                    name="name" ng-model="name" required />
+                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    id="email" class="field-style field-split align-right" placeholder="Email" title="xyz@something.com" 
+                    email="email" ng-model="email" required />
+                </li>
+                <li>
+                    <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    class="field-style field-split align-left" placeholder="Password" password="password"
+                    ng-model="password" required /><br><br>
+                    <ul>
+                        <p class = "italic">at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+                    </ul>
+                </li>
+                <li>
+                    <input type="text" name="field3" class="field-style field-full align-none" placeholder="Subject" />
+                </li>
+                <li>
+                    <input type="submit" value="Submit Information" />
+                </li>
+            </ul>
+        </form>
+  </div>
+
+		</div>
+
+		<!-- The CREATE Artist Modal -->
+		<div id="id03" class="modal">
+		  <span onclick="document.getElementById('id03').style.display='none'" 
 		class="close" title="Close Modal">&times;</span>
 
 		  <!-- Modal Content -->
@@ -45,7 +87,7 @@
 		    </div>
 
 		    <div class="container" style="background-color:#f1f1f1">
-		      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+		      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
 		    </div>
 		  </form>
 		</div>
