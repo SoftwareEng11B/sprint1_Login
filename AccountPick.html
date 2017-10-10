@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Administrator Sign in</title>
+		<link rel="stylesheet" href="main.css">
+		<!--<script src="modal.js"></script>-->
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	</head>	
+	
+	<body>
+		<!-- create and log in buttons-->
+		<div class="btn-group">
+		  <button onclick="document.getElementById('id01').style.display='block'">Create</button>
+		  <button onclick="document.getElementById('id02').style.display='block'">Sign in</button>
+		</div>
+
+		<!-- The CREATE Modal -->
+		<div id="id01" class="modal">
+		  <span onclick="document.getElementById('id01').style.display='none'" 
+		class="close" title="Close Modal">&times;</span>
+
+		  <!-- Modal Content -->
+		  <form class="modal-content animate">
+		    <div class="imgcontainer">
+		      <img src="person-flat.png" alt="Avatar" class="avatar">
+		    </div>
+
+		    <div class="container">
+		      <label class="all-font"><b>Username</b></label>
+		      <input type="text" placeholder="Enter Username" name="uname" required>
+
+		      <label class="all-font"><b>Password</b></label>
+		      <input type="password" placeholder="Enter Password" name="psw" required>
+
+		      <div class="btn-group">
+				  <!--<button onclick="document.getElementById('id01').style.display='block'">Artist</button>
+				  <button onclick="document.getElementById('id02').style.display='block'">Customer</button>-->
+				  <button class="sidebtn">Artist</button>
+				  <button class="sidebtn">Customer</button>
+			  </div>
+
+		      <button type="submit">Register</button>
+		      <input class="small-font" type="checkbox" checked="checked"> Remember me
+		    </div>
+
+		    <div class="container" style="background-color:#f1f1f1">
+		      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+		    </div>
+		  </form>
+		</div>
+
+
+		<!-- The SIGN IN Modal -->
+		<div id="id02" class="modal">
+		  <span onclick="document.getElementById('id02').style.display='none'" 
+		class="close" title="Close Modal">&times;</span>
+
+		  <!-- Modal Content -->
+		  <form class="modal-content animate">
+		    <div class="imgcontainer">
+		      <img src="person-flat.png" alt="Avatar" class="avatar">
+		    </div>
+
+		    <div class="container">
+		      <label class="all-font"><b>Username</b></label>
+		      <input type="text" placeholder="Enter Username" name="uname" required>
+
+		      <label class="all-font"><b>Password</b></label>
+		      <input type="password" placeholder="Enter Password" name="psw" required>
+
+		      <button type="submit">Login</button>
+		      <input class="small-font" type="checkbox" checked="checked"> Remember me
+		    </div>
+
+		    <div class="container" style="background-color:#f1f1f1">
+		      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+		      <span class="small-font psw">Forgot <a class="small-font" href="#">password?</a></span>
+		    </div>
+		  </form>
+		</div>
+
+	</body>
+</html>
