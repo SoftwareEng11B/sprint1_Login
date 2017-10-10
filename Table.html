@@ -9,6 +9,7 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
+th{font-size: 20px;}
 
 td, th {
     border: 1px solid #52595d;
@@ -21,47 +22,77 @@ tr:nth-child(even) {
 }
 td.redish{color: #e05e60;}
 td.mint{color: #3ac397;}
+
+h1{
+  font-family: lato;
+  color: #52595d;
+  padding: 0px;
+}
+
 </style>
 </head>
 <body>
 
+<h1>Customers</h1>
 <table>
   <tr>
     <th>Name</th>
     <th>Email</th>
-    <th>Phone Number</th>
-    <th>Address</th>
+    <!-- <th>Phone Number</th>
+    <th>Address</th> 
+    This is an idea of what *should* be in the profile, but things that are not-->
     <th>Match Status</th>
   </tr>
   <!-- ultimately the table would be populated by code that looks like this and links into the database
   <td>{{client.name}}</td>
   <td>{{client.email}}</td>
-  <td>{{client.phoneNumber}}</td>
-  <td>{{client.address}}</td>
   <td>{{client.matchStatus}}</td>
   -->
   <tr>
     <td>Allie Gator</td>
     <td>alliegator@ufl.edu</td>
-    <td>352-352-3523</td>
-    <td>432 Newell Dr, Gainesville, FL 32611</td>
     <td class= "redish" =>Not Matched</td>
   </tr>
   <tr>
     <td>Albert Gator</td>
     <td>albertgator@ufl.edu</td>
-    <td>352-531-3523</td>
-    <td>431 Stadium Rd, Gainesville, FL 32611</td>
     <td class= "mint" =>Matched</td>
   </tr>
   <tr>
     <td>Ken Fuchs</td>
     <td>kennyboi@ufl.edu</td>
-    <td>352-dad-dyaf</td>
-    <td>2151 W University Ave, Gainesville, FL 32603</td>
     <td class= "mint" =>Matched</td>
   </tr>
 
+</table>
+
+<h1>Artists</h1>
+<table>
+<tr>
+<!-- ultimately the table would be populated by code that looks like this and links into the database
+  <td>{{artist.name}}</td>
+  <td>{{artist.email}}</td>
+  <td>{{artist.classification}}</td>
+-->
+    <th>Name</th>
+    <th>Email</th>
+    <th>Artist Type</th>
+  </tr>
+  <tr>
+    <td>Jessica Designer</td>
+    <td>graphicdesign@ufl.edu</td>
+    <td>Graphic Designer</td>
+  </tr>
+  <tr>
+    <td>Joe Artist</td>
+    <td>botsyartist@ufl.edu</td>
+    <td>Botsy Artist</td>
+  </tr>
+  <tr>
+    <td>Jack Painter</td>
+    <td>painter@ufl.edu</td>
+    <td>Painter</td>
+  </tr>
 </table>
 
 </body>
