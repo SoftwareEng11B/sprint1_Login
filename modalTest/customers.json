@@ -1,0 +1,19 @@
+{
+    "entries": [
+        {
+            "name": "customer1",
+            "email": "email1@something.com",
+            "password": "password1"
+        },
+        {
+            "name": "customer2",
+            "email": "email2@something.com",
+            "password": "password2"
+        },
+        {
+            "name": "customer3",
+            "email": "email3@something.com",
+            "password": "password3"
+        }
+    ]
+}

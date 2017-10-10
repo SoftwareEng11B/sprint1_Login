@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+            <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+
+
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">I'm a customer!</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h1>Personal Information</h1>
+    </div>
+    <form class="form-style" role="form" ng-submit = "create(customerForm.$valid)">
+            <h2>Let's make art</h2>
+            <ul>
+                <li>
+                    <input type="text" name="name" id="name" class="field-style field-split align-left" placeholder="Name" 
+                    name="name" ng-model="name" required />
+                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    id="email" class="field-style field-split align-right" placeholder="Email" title="xyz@something.com" 
+                    email="email" ng-model="email" required />
+                </li>
+                <li>
+                    <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    class="field-style field-split align-left" placeholder="Password" password="password"
+                    ng-model="password" required /><br><br>
+                    <ul>
+                        <p class = "italic">at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+                    </ul>
+                </li>
+                <li>
+                    <input type="text" name="field3" class="field-style field-full align-none" placeholder="Subject" />
+                </li>
+                <li>
+                    <input type="submit" value="Submit Information" />
+                </li>
+            </ul>
+        </form>
+  </div>
+
+</div>
+    <script src="modalForm.js"></script>
+</body>
+</html>
