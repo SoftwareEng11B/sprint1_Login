@@ -26,3 +26,10 @@ window.onclick = function(event) {
     }
 }
 };
+function artistCreate() {
+	location.href= "http://www.google.com";
+}
+function customerCreate() {
+	location.href= "http://www.google.com";
+}
+
